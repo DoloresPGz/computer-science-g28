@@ -32,7 +32,7 @@ class Documental extends Largometraje {
     Narrado por: ${this.narrador}`
   }
 }
-const Largometraje1 = new Largometraje("Shrek", 180, "Fantasia")
+// const Largometraje1 = new Largometraje("Shrek", 180, "Fantasia")
 const Pelicula1 = new Pelicula("El señor de los anillos", 180, "Fantasia", "B")
 const Documental1 = new Documental("El origen del universo", 120, "Ciencia", "Neil deGrasse Tyson")
 // console.log(Largometraje1.getDescripcion())
@@ -52,6 +52,7 @@ class Cine {
 const cinepolis = new Cine("Cinepolis")
 
 console.log(cinepolis.reproducir(Documental1))
+console.log(cinepolis.reproducir(Pelicula1))
 
 
 
