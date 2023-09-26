@@ -2,7 +2,7 @@ const animal = {
   name: 'Animal',
   haceSonido: function () {
     console.log('algun sonido')
-  }
+  },
 }
 
 const perro = Object.create(animal)
@@ -16,8 +16,6 @@ gato.name = 'Gato'
 gato.haceSonido = function () {
   console.log('miau miau')
 }
-
-
 
 perro.haceSonido()
 gato.haceSonido()
