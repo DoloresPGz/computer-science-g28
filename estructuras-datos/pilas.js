@@ -110,9 +110,10 @@ pila2.print()
 let datoEliminado2 = pila2.pop()
 
 pila2.print()
-console.log(`El dato eliminado es: ${datoEliminado2}`)
+// console.log(`El dato eliminado es: ${datoEliminado2}`)
 
-console.log(pila2.peek())
+// console.log(pila2.peek())
+console.log(pila2)
 
 
 
