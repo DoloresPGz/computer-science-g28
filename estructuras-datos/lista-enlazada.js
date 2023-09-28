@@ -30,6 +30,25 @@ class LinkedList{
     }
 
     //Borrado de un elemento
+    delete(data){
+        let current = this.head
+        let prev = this.head
+
+        if(this.head !== null){
+            //Primer caso: El elemento que quiero borrar está en la cabeza
+            if(this.head.data == data){
+                this.head = this.head.next
+            }else{
+            //Segundo caso: El elemento que quiero borrar no se encuentra en la cabeza
+                while(current.next !== null && current.data !== data ){
+                    prev = current //guardamos el elemento anterior
+                    current = current.next //nos movemos al siguiente nodo de la lista
+                }
+                //Cuando sale del ciclo, encontramos el elmento que queremos elimirar
+                prev.next = current.next
+            }
+        }
+    }
 
     //Recorrido de la lista
 
@@ -43,3 +62,7 @@ ll.insert(2)
 ll.insert(3)
 
 console.log(ll)
+ll.delete(2)
+console.log(ll)
+
+ll.delete(5)
