@@ -67,6 +67,14 @@ class LinkedList{
     }
 
     //Búsqueda de un elemento
+    search(data){
+        let current = this.head
+
+        while(!(current == null || current.data == data)){
+            current = current.next
+        }
+        return current
+    }
 }
 
 let ll = new LinkedList()
@@ -85,3 +93,6 @@ console.log(ll.print())
 ll.delete(7)
 
 console.log(ll.print())
+
+console.log(ll.search(4))
+console.log(ll.search(7))
