@@ -45,12 +45,26 @@ class LinkedList{
                     current = current.next //nos movemos al siguiente nodo de la lista
                 }
                 //Cuando sale del ciclo, encontramos el elmento que queremos elimirar
-                prev.next = current.next
+                if(current.next !== null)
+                    prev.next = current.next
+                
             }
         }
     }
 
     //Recorrido de la lista
+    print(){
+        let res = ""
+        let current = this.head
+        while(true){
+            if(current == null){
+                break
+            }
+            res += `${current.data} -> `
+            current = current.next
+        }
+        return res += "null"
+    }
 
     //Búsqueda de un elemento
 }
@@ -60,9 +74,14 @@ let ll = new LinkedList()
 ll.insert(1)
 ll.insert(2)
 ll.insert(3)
+ll.insert(4)
+ll.insert(5)
 
-console.log(ll)
+console.log(ll.print())
 ll.delete(2)
-console.log(ll)
+console.log(ll.print())
 
-ll.delete(5)
+//prueba de borrar un elemento que no existe
+ll.delete(7)
+
+console.log(ll.print())
