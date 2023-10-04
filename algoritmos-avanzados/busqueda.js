@@ -12,7 +12,7 @@ function busquedaLineal(arreglo, elemento){
       return i
     }
   }
-  // Si no se encontro el elemento
+  // 
   return "no se encontro" // No se encontro el elemento
 }
 console.timeEnd('busquedaLineal')
@@ -52,3 +52,8 @@ let arreglo = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
 console.log(busquedaLineal(arreglo, 9))
 console.log(busquedaBinaria(arreglo, 9))
+
+
+arreglo.sort(function (a,b){
+  
+})
